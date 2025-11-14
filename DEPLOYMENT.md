@@ -49,11 +49,13 @@ git push -u origin main
 ### Step 5: Access Your Live Site
 
 Your site will be available at:
+
 ```
 https://YOUR_USERNAME.github.io/rippleimpact/
 ```
 
 For example, if your GitHub username is `john-doe`:
+
 ```
 https://john-doe.github.io/rippleimpact/
 ```
@@ -65,11 +67,13 @@ https://john-doe.github.io/rippleimpact/
 If you prefer manual deployment:
 
 ### Build the project locally:
+
 ```bash
 npm run build
 ```
 
 ### Deploy using gh-pages package:
+
 ```bash
 # Install gh-pages
 npm install -D gh-pages
@@ -80,6 +84,7 @@ npm run deploy
 ```
 
 The manual deploy script will:
+
 1. Build your project
 2. Push the `dist` folder to a `gh-pages` branch
 3. GitHub will automatically serve it
@@ -89,16 +94,19 @@ The manual deploy script will:
 ## 📝 Important Notes
 
 ### Base Path Configuration
+
 The `vite.config.js` is already configured with:
+
 ```javascript
-base: '/rippleimpact/'
+base: "/rippleimpact/";
 ```
 
 ⚠️ **If you named your repository differently**, update this to match your repo name!
 
 For example, if your repo is named `my-donation-app`:
+
 ```javascript
-base: '/my-donation-app/'
+base: "/my-donation-app/";
 ```
 
 ### Custom Domain (Optional)
@@ -106,11 +114,13 @@ base: '/my-donation-app/'
 Want to use your own domain like `rippleimpact.com`?
 
 1. Add a `CNAME` file to the `public` folder:
+
    ```bash
    echo "rippleimpact.com" > public/CNAME
    ```
 
 2. In GitHub Settings → Pages → Custom domain:
+
    - Enter your domain
    - Enable "Enforce HTTPS"
 
@@ -137,21 +147,26 @@ The GitHub Action will automatically rebuild and redeploy! 🎉
 ## 🐛 Troubleshooting
 
 ### Site shows 404
+
 - Make sure GitHub Pages is enabled in Settings → Pages
 - Check that the `base` path in `vite.config.js` matches your repo name
 - Wait a few minutes after pushing (deployment takes time)
 
 ### Styles not loading
+
 - Verify the `base` path is correct in `vite.config.js`
 - Clear your browser cache (Cmd+Shift+R / Ctrl+Shift+R)
 
 ### GitHub Action fails
+
 - Check the Actions tab for error details
 - Make sure Node.js 20 is specified in the workflow
 - Verify `package-lock.json` is committed
 
 ### Routes not working (404 on refresh)
+
 This is normal for client-side routing on GitHub Pages. Solutions:
+
 1. Use hash routing (add `#` to URLs)
 2. Or add a custom 404.html that redirects to index.html
 
@@ -171,6 +186,7 @@ I've prepared a manual deploy option. Add this to your `package.json` scripts:
 ```
 
 Then you can deploy anytime with:
+
 ```bash
 npm run deploy
 ```
@@ -194,10 +210,12 @@ npm run deploy
 ## 🌟 Your Live Demo
 
 Once deployed, you can share:
+
 - **Demo Link**: `https://YOUR_USERNAME.github.io/rippleimpact/`
 - **GitHub Repo**: `https://github.com/YOUR_USERNAME/rippleimpact`
 
 Perfect for:
+
 - Portfolio showcases
 - Hackathon submissions
 - Investor presentations
@@ -207,4 +225,3 @@ Perfect for:
 ---
 
 **Need help?** Check the GitHub Actions logs or create an issue in your repository!
-
